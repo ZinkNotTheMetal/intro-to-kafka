@@ -63,7 +63,7 @@ Limitations:
 
 2. Zero Fault-Tolerance: Once the consumer reads and processes the message but the back-end database is down or bug in the consumer code
 
-[Alternatives](https://google.com)
+[Kafka Predecessors: Alternatives](https://github.com/ZinkNotTheMetal/intro-to-kafka/blob/main/docs/alternatives.md)
 
 ## Why Kafka?
 
