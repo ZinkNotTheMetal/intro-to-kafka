@@ -4,6 +4,8 @@ A software architecture pattern promoting the production, detection, consumption
 
 ## Definitions
 
+**Event Sourcing** - An architectual style or approach to maintaining an application's state by capturing all changes as a sequence of time-ordered, immutable events.
+
 **Broker** - An event broker is middleware software, appliance or SaaS used to transmit events between event producers and consumers in a publish-subscribe pattern. (in this case Apache Kafka)
 
 **Message** - A basic unit of communication (object, string, number)
@@ -61,6 +63,8 @@ Limitations:
 
 2. Zero Fault-Tolerance: Once the consumer reads and processes the message but the back-end database is down or bug in the consumer code
 
+[Alternatives](https://google.com)
+
 ## Why Kafka?
 
 1. Scalable
@@ -79,7 +83,7 @@ Limitations:
 
 ## Kafka Components / Definitions
 
-1. Broker
+1. Broker - software process (exe, daemon, server) that stores messages and categorizes messages as topics
     * Cluster - is multiple brokers in a single environment for message duplication in case of failures
 
 2. Zookeeper - centralized service which all brokers are connected to. As brokers do not know about one another. Responsibilities include
@@ -100,6 +104,10 @@ Limitations:
   2. Compaction Topics - paradigm to upsert (insert/update values) kafka messages based on the key of the message.
 
 **Partitions** - are the way that kafka provides redundancy and scalability. The Kafka topic will further be divided into multiple partitions. The actual messages or the data will store in the Kafka partition. It is directly proportional to the parallelism. If we have increased the number of partition then we can run the multiple parallel jobs on the same Kafka topic. If we increase the amount of partitions over the number of brokers multiple partitions will be on a single broker. Limitations of a single partition on a single broker then the topic will be constrained by the broker's IO throughput. Each partition will store *different* messages.
+
+**Message Offset** - A placeholder that defines what the last read message (position) was and corresponds to the message identifier
+
+**Lag** - When the message offset does not equal to the latest message identifier
 
 ## Confluent Kafka vs Apache Kafka
 
@@ -138,4 +146,3 @@ Confluent Kafka extends Apache Kafka with a few additional benefits
 [.NET Client Getting Started](https://developer.confluent.io/get-started/dotnet/)
 
 [.NET Example with Wikipedia](https://www.confluent.io/blog/build-cross-platform-kafka-applications-using-c-and-dotnet-5/)
-
