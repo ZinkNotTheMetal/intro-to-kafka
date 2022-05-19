@@ -101,9 +101,41 @@ Limitations:
 
 **Partitions** - are the way that kafka provides redundancy and scalability. The Kafka topic will further be divided into multiple partitions. The actual messages or the data will store in the Kafka partition. It is directly proportional to the parallelism. If we have increased the number of partition then we can run the multiple parallel jobs on the same Kafka topic. If we increase the amount of partitions over the number of brokers multiple partitions will be on a single broker. Limitations of a single partition on a single broker then the topic will be constrained by the broker's IO throughput. Each partition will store *different* messages.
 
-## Creating Kafka Cluster
+## Confluent Kafka vs Apache Kafka
+
+[Stack Overflow: What is the difference?](https://stackoverflow.com/a/39709900)
+
+Confluent (Kafka) offers a holistic set of enterprise-grade capabilities that come ready out of the box to accelerate your time to value and reduce your TCO for data in motion. Rather than needing to spend costly development cycles building and maintaining foundational tooling for Kafka internally, you can immediately leverage features built by the world’s foremost Kafka experts to deploy to production quickly and confidently.
+
+Confluent Kafka extends Apache Kafka with a few additional benefits
+
+1. Serverless - automated, fully managed Kafka clusters with zero ops management
+
+2. Elastic scaling - scale up and down from 0 to GBps without over-provisioning infrastructure
+
+3. Infinite Storage / Tiered Storage - Cost-effectively retain data at any scale without growing compute resources
+
+4. High Availability - guaranteed 99.99% uptime SLA wi built-in failover and multi-AZ replication
+
+5. No ZooKeeper management - metadata management completely abstracted away from developers
+
+6. No-touch patching and upgrades - fully optimized infrastructure with zero-downtime patching and upgrades
+
+7. Native Non-Java Clients - C/C++, Python, Go, C#/.NET
+
+## Kafka Cluster Documentation
+
+### *Apache Kafka*
 
 [Microsoft Docs: How to create in Azure Portal](https://docs.microsoft.com/en-us/azure/hdinsight/kafka/apache-kafka-get-started)
 
-[Docker](https://google.com)
+[Docker Compose Example](https://code.parts/2020/06/21/kafka-docker-compose-yml/)
+
+### *Confluent Kafka*
+
+[Docker Setup](https://developer.confluent.io/quickstart/kafka-docker/)
+
+[.NET Client Getting Started](https://developer.confluent.io/get-started/dotnet/)
+
+[.NET Example with Wikipedia](https://www.confluent.io/blog/build-cross-platform-kafka-applications-using-c-and-dotnet-5/)
 
