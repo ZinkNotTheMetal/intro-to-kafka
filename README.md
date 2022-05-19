@@ -4,7 +4,7 @@ A software architecture pattern promoting the production, detection, consumption
 
 ## Definitions
 
-**Event Sourcing** - An architectual style or approach to maintaining an application's state by capturing all changes as a sequence of time-ordered, immutable events.
+**Event Sourcing** - An architectural style or approach to maintaining an application's state by capturing all changes as a sequence of time-ordered, immutable events.
 
 **Broker** - An event broker is middleware software, appliance or SaaS used to transmit events between event producers and consumers in a publish-subscribe pattern. (in this case Apache Kafka)
 
@@ -113,7 +113,7 @@ Limitations:
 
 [Stack Overflow: What is the difference?](https://stackoverflow.com/a/39709900)
 
-Confluent (Kafka) offers a holistic set of enterprise-grade capabilities that come ready out of the box to accelerate your time to value and reduce your TCO for data in motion. Rather than needing to spend costly development cycles building and maintaining foundational tooling for Kafka internally, you can immediately leverage features built by the world’s foremost Kafka experts to deploy to production quickly and confidently.
+Confluent (Kafka) offers a holistic set of enterprise-grade capabilities that come ready out of the box to accelerate your time to value and reduce your TCO (Total Cost of Operations) for data in motion. Rather than needing to spend costly development cycles building and maintaining foundational tooling for Kafka internally, you can immediately leverage features built by the world’s foremost Kafka experts to deploy to production quickly and confidently.
 
 Confluent Kafka extends Apache Kafka with a few additional benefits
 
